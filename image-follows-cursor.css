@@ -1,0 +1,38 @@
+.hover-image {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    position: fixed;
+    z-index: 1;
+    object-fit: cover;
+}
+.hover-image.visible {
+    opacity: 0.5;
+    pointer-events: none;
+}
+section[id*="img-hover"] .list-item-media img {
+    opacity: 0;
+    visibility: hidden;
+}
+section[id*="img-hover"] .list-item-content,
+section[id*="img-hover"] .list-item-content * {
+    position: relative;
+    z-index: 5;
+}
+@media (hover: none) and (pointer: coarse) {
+    .hover-image {
+        left: 50% !important;
+        top: 50vh !important;
+        transform: translate(-50%, -50%);
+        width: 80vw !important;
+        aspect-ratio: 1/1 !important;
+    }
+}
+  section[data-section-id="681927e496a4a7158419a311"] .list-item, section[data-section-id="68192d70dcea771b55f4c15e"] .list-item {
+  border: 1.5px solid #333;
+  border-radius: 20px;
+  transition: 300ms !important;
+  &:hover {
+    background-color: #222 !important;
+  }
+}
